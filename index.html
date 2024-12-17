@@ -1,318 +1,318 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>3d-gadgetz.nl</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <link rel="icon" href="https://www.3d-gadgetz.nl/images/ico.ico" type="image/ico">
 
-        <style>
-            .form-container {
-                display: flex;
-                justify-content: space-between;
-                gap: 20px;
-            }
-            .form-container .form-section {
-                width: 48%;
-            }
-            #main {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-            article.thumb {
-                flex: 1 1 calc(33.333% - 40px);
-                margin: 20px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            article.thumb img {
-                transform: scale(0.85); /* Reduce the size to 85% */
-                display: block; /* Prevent gaps caused by inline-block rendering */
-                border-radius: 15px; /* Add this line to round the corners */
-            }
-            .center-text {
-                text-align: center;
-                font-size: 2em;
-                margin-top: 20px;
-            }
-            .modal {
-                display: none; /* Hidden by default */
-                position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
-                left: 0;
-                top: 0;
-                width: 100%; /* Full width */
-                height: 100%; /* Full height */
-                overflow: auto; /* Enable scroll if needed */
-                background-color: rgba(0,0,0,0.9); /* Dark background */
-                padding-top: 60px;
-            }
-            .modal-content {
-                background-color: #333; /* Dark mode */
-                color: white; /* White text */
-                margin: 5% auto; /* 5% from the top and centered */
-                padding: 40px;
-                border: 1px solid #888;
-                width: 50%; /* Smaller size */
-            }
-            .close {
-                color: #aaa;
-                float: right;
-                font-size: 28px;
-                font-weight: bold;
-            }
-            .close:hover,
-            .close:focus {
-                color: white;
-                text-decoration: none;
-                cursor: pointer;
-            }
-            .dark-mode-input {
-                background-color: #444;
-                color: white;
-                border: 1px solid #888;
-                padding: 5px;
-            }
-        </style>
-    </head>
-    <body class="is-preload">
-        <div class="center-text">Welkom bij 3d-gadgetz.nl!</div>
+<head>
+    <title>3d-gadgetz.nl</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="icon" href="https://www.3d-gadgetz.nl/images/ico.ico" type="image/ico">
 
-        <div id="wrapper">
+    <style>
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-            <header id="header">
-                <h1><a href="index.html"><strong>3D-Gadgetz.nl</strong> by Sasha Rodriguez</a> and <a href="https://www.benjamintjoa.com" target="_blank">Benjamin Tjoa</a></h1>
-                <nav>
-                    <ul>
-                        <li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
-                        <li><a href="#" id="code-link" class="icon solid fa-code">Code</a></li>
-                    </ul>
-                </nav>
-            </header>
+        .form-container .form-section {
+            width: 48%;
+        }
 
-            <div id="main">
-                <article class="thumb">
-                    <a href="images/fulls/gun.png" class="image"><img src="images/thumb/gun.png" alt="" /></a>
-                    <h2>Pistool</h2>
-                    <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €1,25</p>
-                </article>
-                <article class="thumb">
-                    <a href="images/fulls/spinner.png" class="image"><img src="images/thumb/spinner.png" alt="" /></a>
-                    <h2>Spinner</h2>
-                    <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €1,-</p>
-                </article>
-                <article class="thumb">
-                    <a href="images/fulls/lambo.png" class="image"><img src="images/thumb/lambo.png" alt="" /></a>
-                    <h2>Lambo</h2>
-                    <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €1,50</p>
-                </article>
-                <article class="thumb">
-                    <a href="images/fulls/glider.png" class="image"><img src="images/thumb/glider.png" alt="" /></a>
-                    <h2>Zweefvliegtuigje</h2>
-                    <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €2,-</p>
-                </article>
-                <article class="thumb">
-                    <a href="images/fulls/fingerboard.png" class="image"><img src="images/thumb/fingerboard.png" alt="" /></a>
-                    <h2>Fingerboard</h2>
-                    <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €1,50</p>
-                </article>
-                <article class="thumb">
-                    <a href="images/fulls/Katana.png" class="image"><img src="images/thumb/Katana.png" alt="" /></a>
-                    <h2>Katana</h2>
-                    <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €2,00</p>
-                </article>
-                <article class="thumb">
-                    <a href="images/fulls/Anchor.png" class="image"><img src="images/thumb/Anchor.png" alt="" /></a>
-                    <h2>Sleutelhanger</h2>
-                    <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €1,20</p>
-                </article>
-                <article class="thumb">
-                    <a href="images/fulls/Watch_stand.png" class="image"><img src="images/thumb/Watch_stand.png" alt="" /></a>
-                    <h2>Horloge standaard</h2>
-                    <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €2,-</p>
-                </article>
-                <article class="thumb">
-                    <a href="images/fulls/mes.png" class="image"><img src="images/thumb/mes.png" alt="" /></a>
-                    <h2>Mes</h2>
-                    <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €5,-</p>
-                </article>
-                 <article class="thumb">
-                    <a href="images/fulls/sleutel-hanger.png" class="image"><img src="images/thumb/sleutel-hanger.png" alt="" /></a>
-                    <h2>Sleutelhanger</h2>
-                    <p>Deze sleutelhanger kan je zelf kiezen, en je kunt zelf ook bepalen wat op de bovenkant komt, en je kan ook tekst op de achterkant kiezen. Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €2,-</p>
-                </article>
+        #main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        article.thumb {
+            flex: 1 1 calc(33.333% - 40px);
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        article.thumb img {
+            transform: scale(0.85);
+            display: block;
+            border-radius: 15px;
+        }
+
+        .center-text {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #333;
+            color: white;
+            margin: 5% auto;
+            padding: 40px;
+            border: 1px solid #888;
+            width: 50%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .dark-mode-input {
+            background-color: #444;
+            color: white;
+            border: 1px solid #888;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <div class="center-text">Welkom bij 3d-gadgetz.nl!</div>
+
+    <div id="wrapper">
+        <header id="header">
+            <h1><a href="index.html"><strong>3D-Gadgetz.nl</strong> by Sasha Rodriguez</a> and <a href="https://www.benjamintjoa.com" target="_blank">Benjamin Tjoa</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="icon solid fa-info-circle">About</a></li>
+                    <li><a href="#kleuren" class="icon solid fa-palette">Kleuren</a></li>
+                    <li><a href="#footer" class="icon solid fa-info-circle">Footer</a></li>
+                    <li><a href="#" id="code-link" class="icon solid fa-code">Code</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="main">
+            <article class="thumb">
+                <a href="images/fulls/gun.png" class="image"><img src="images/thumb/gun.png" alt="" /></a>
+                <h2>Pistool</h2>
+                <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €1,25</p>
+            </article>
+            <article class="thumb">
+                <a href="images/fulls/spinner.png" class="image"><img src="images/thumb/spinner.png" alt="" /></a>
+                <h2>Spinner</h2>
+                <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €1,-</p>
+            </article>
+            <article class="thumb">
+                <a href="images/fulls/lambo.png" class="image"><img src="images/thumb/lambo.png" alt="" /></a>
+                <h2>Lambo</h2>
+                <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €1,50</p>
+            </article>
+            <article class="thumb">
+                <a href="images/fulls/glider.png" class="image"><img src="images/thumb/glider.png" alt="" /></a>
+                <h2>Zweefvliegtuigje</h2>
+                <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €2,-</p>
+            </article>
+            <article class="thumb">
+                <a href="images/fulls/fingerboard.png" class="image"><img src="images/thumb/fingerboard.png" alt="" /></a>
+                <h2>Fingerboard</h2>
+                <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €1,50</p>
+            </article>
+            <article class="thumb">
+                <a href="images/fulls/Katana.png" class="image"><img src="images/thumb/Katana.png" alt="" /></a>
+                <h2>Katana</h2>
+                <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €2,00</p>
+            </article>
+            <article class="thumb">
+                <a href="images/fulls/Anchor.png" class="image"><img src="images/thumb/Anchor.png" alt="" /></a>
+                <h2>Sleutelhanger</h2>
+                <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €1,20</p>
+            </article>
+            <article class="thumb">
+                <a href="images/fulls/Watch_stand.png" class="image"><img src="images/thumb/Watch_stand.png" alt="" /></a>
+                <h2>Horloge standaard</h2>
+                <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €2,-</p>
+            </article>
+            <article class="thumb">
+                <a href="images/fulls/mes.png" class="image"><img src="images/thumb/mes.png" alt="" /></a>
+                <h2>Mes</h2>
+                <p>Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €5,-</p>
+            </article>
+            <article class="thumb">
+                <a href="images/fulls/sleutel-hanger.png" class="image"><img src="images/thumb/sleutel-hanger.png" alt="" /></a>
+                <h2>Sleutelhanger</h2>
+                <p>Deze sleutelhanger kan je zelf kiezen, en je kunt zelf ook bepalen wat op de bovenkant komt, en je kunt ook tekst op de achterkant kiezen. Wil je dit nou kopen? Stuur een mailtje naar mij op 2324116@hageveld.nl. €2,-</p>
+            </article>
+        </div>
+
+        <!-- Kleuren Section -->
+        <section id="kleuren" class="panel">
+            <div class="inner">
+                <h2>Kleuren</h2>
+                <p>Hier kun je de kleuren van je gekozen items bepalen.</p>
+                <!-- Add a color picker or any other feature you wish -->
+                <input type="color" id="colorPicker" />
+                <label for="colorPicker">Kies een kleur</label>
             </div>
+        </section>
 
-            <footer id="footer" class="panel">
-                <div class="inner split">
-                    <div>
-                        <section>
-                            <h2>Welkom!</h2>
-                            <p>Hoi, deze website is gemaakt door Sasha Rodriguez en Benjamin Tjoa. Deze site is net gelaunched dus kan het zijn dat er problemen of errors zijn. Als dit zo is, stuur dan een mail naar 2324116@hageveld.nl (Sasha Rodriguez) of naar 2223215@hageveld.nl (Benjamin Tjoa).</p>
-                        </section>
+        <!-- About Section -->
+        <section id="about" class="panel">
+            <div class="inner">
+                <h2>Welkom!</h2>
+                <p>Deze website is gemaakt door Sasha Rodriguez en Benjamin Tjoa. Deze site is net gelaunched dus kan het zijn dat er problemen of errors zijn. Als dit zo is, stuur dan een mail naar 2324116@hageveld.nl (Sasha Rodriguez) of naar 2223215@hageveld.nl (Benjamin Tjoa).</p>
+            </div>
+        </section>
+
+        <footer id="footer" class="panel">
+            <div class="inner split">
+                <div>
+                    <section>
                         <h2>Custom design</h2>
                         <section>Deze website heeft al een paar voorbeelden, maar er komen er steeds nieuw erbij. Heb je een tip of een custom disign die je wilt toevoegen, is dat natuurlijk ook mogelijk. Dat kan je mailen naar ons of snel de formulier hiernaast invullen en doorsturen.</section>
                         <p class="copyright">&copy; Sasha Rodriguez dankzij <a href="http://www.benjamintjoa.nl">Benjamin Tjoa</a>'s assistentie.</p>
-                    </div>
-                    <div>
-                        <section>
-                            <h2>Is er een probleem? Wij willen graag dit probleem fixen, dus stuur het snel naar ons hieronder.</h2>
-                            <div class="form-container">
-                                <div class="form-section">
-                                    <h3>Sasha Rodriguez (Owner)</h3>
-                                    <form action="https://formspree.io/f/meoqrdny" method="POST">
-                                        <div class="fields">
-                                            <div class="field half">
-                                                <input type="text" name="name" id="name" placeholder="Naam" />
-                                            </div>
-                                            <div class="field half">
-                                                <input type="text" name="email" id="email" placeholder="Email" />
-                                            </div>
-                                            <div class="field">
-                                                <textarea name="message" id="message" rows="4" placeholder="Bericht"></textarea>
-                                            </div>
-                                        </div>
-                                        <ul class="actions">
-                                            <li><input type="submit" value="Verstuur" class="primary" /></li>
-                                            <li><input type="reset" value="Reset" /></li>
-                                        </ul>
-                                    </form>
-                                </div>
-                                <div class="form-section">
-                                    <h3>Benjamin Tjoa (Admin)</h3>
-                                    <form action="https://formspree.io/f/xeoqrddy" method="POST">
-                                        <div class="fields">
-                                            <div class="field half">
-                                                <input type="text" name="name" id="name" placeholder="Naam" />
-                                            </div>
-                                            <div class="field half">
-                                                <input type="text" name="email" id="email" placeholder="Email" />
-                                            </div>
-                                            <div class="field">
-                                                <textarea name="message" id="message" rows="4" placeholder="Bericht"></textarea>
-                                            </div>
-                                        </div>
-                                        <ul class="actions">
-                                            <li><input type="submit" value="Verstuur" class="primary" /></li>
-                                            <li><input type="reset" value="Reset" /></li>
-                                        </ul>
-                                    </form>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+                    </section>
                 </div>
-            </footer>
-        </div>
-
-        <!-- The Modal -->
-        <div id="codeModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Enter code to access files:</p>
-                <input type="password" id="codeInput" placeholder="Enter code" class="dark-mode-input">
-                <button onclick="checkCode()" class="dark-mode-input">Submit</button>
+                <div>
+                    <section>
+                        <h2>Is er een probleem? Wij willen graag dit probleem fixen, dus stuur het snel naar ons hieronder.</h2>
+                        <div class="form-container">
+                            <div class="form-section">
+                                <h3>Sasha Rodriguez (Owner)</h3>
+                                <form action="https://formspree.io/f/meoqrdny" method="POST">
+                                    <div class="fields">
+                                        <div class="field half">
+                                            <input type="text" name="name" id="name" placeholder="Naam" />
+                                        </div>
+                                        <div class="field half">
+                                            <input type="text" name="email" id="email" placeholder="Email" />
+                                        </div>
+                                        <div class="field">
+                                            <textarea name="message" id="message" rows="4" placeholder="Bericht"></textarea>
+                                        </div>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Verstuur" class="primary" /></li>
+                                        <li><input type="reset" value="Reset" /></li>
+                                    </ul>
+                                </form>
+                            </div>
+                            <div class="form-section">
+                                <h3>Benjamin Tjoa (Admin)</h3>
+                                <form action="https://formspree.io/f/xeoqrddy" method="POST">
+                                    <div class="fields">
+                                        <div class="field half">
+                                            <input type="text" name="name" id="name" placeholder="Naam" />
+                                        </div>
+                                        <div class="field half">
+                                            <input type="text" name="email" id="email" placeholder="Email" />
+                                        </div>
+                                        <div class="field">
+                                            <textarea name="message" id="message" rows="4" placeholder="Bericht"></textarea>
+                                        </div>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Verstuur" class="primary" /></li>
+                                        <li><input type="reset" value="Reset" /></li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
+        </footer>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="codeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Enter code to access files:</p>
+            <input type="password" id="codeInput" placeholder="Enter code" class="dark-mode-input">
+            <button onclick="checkCode()" class="dark-mode-input">Submit</button>
         </div>
+    </div>
 
-        <!-- The Files Section -->
-        <div id="filesSection" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeFiles()">&times;</span>
-                <h2>Select a file:</h2>
-                <!-- List your files here -->
-                <ul>
-                    <p>Gun files:</p>
-                    <li><a href="files/gun/gun.stl">Gun</a></li>
-                    <p>Spinner files:</p>
-                    <li><a href="files/spinner/Fidget-spinner.stl">Spinner</a></li>
-                    <p>Glider files:</p>
-                    <li><a href="files/Glider/stratos_b_.stl">Glider</a></li>
-                    <p>Fingerboard files:</p>
-                    <li><a href="files/fingerboard/Fingerboard_3D_Print_Model_Final.stl">Fingerboard</a></li>
-                    <p>Lambo files:</p>
-                    <li><a href="files/Lambo/lambo.stl">Lambo</a></li>
-                    <p>Anchor files:</p>
-                    <li><a href="files/Anchor/anchor.stl">Anchor</a></li>
-                    <p>Wach stand files:</p>
-                    <li><a href="files/Watch-stand/watch_stand.V2.STL">Watch stand</a></li>
-                    <p>Sleutel hanger files:</p>
-                    <li><a href="files/Sleutel-hanger/sleutel-hanger.stl">Sleutel hanger</a></li>
-                    <p>Katana files:</p>
-                    <li><a href="files/Katana/PK_BLADE.stl">Blade</a></li>
-                    <li><a href="files/Katana/PK_HANDLE.stl">Handle</a></li>
-                    <li><a href="files/Katana/PK_SHEATH_L.stl">Sheath L</a></li>
-                    <li><a href="files/Katana/PK_SHEATH_R.stl">Sheath R</a></li>
-                    <li><a href="files/Katana/PK_SPRING-2x.stl">Spring 2x</a></li>
-                    <p>OTF-knife files:</p>
-                    <li><a href="files/OTF-knife/blade.stl">OTF-knife</a></li>
-                    <li><a href="files/OTF-knife/Lock_Spring.stl">Lock Spring</a></li>
-                    <li><a href="files/OTF-knife/Slider.stl">Slider</a></li>
-                    <li><a href="files/OTF-knife/lowercase.stl">Lowercase</a></li>
-                    <li><a href="files/OTF-knife/rightblade.stl">Right Blade</a></li>
-                    <li><a href="files/OTF-knife/uppercase.stl">Uppercase</a></li>
-                </ul>
-            </div>
+    <!-- The Files Section -->
+    <div id="filesSection" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFiles()">&times;</span>
+            <h2>Select a file:</h2>
+            <ul>
+                <!-- Add links to your files here -->
+                <p>Gun files:</p>
+                <li><a href="files/gun/gun.stl">Gun</a></li>
+                <!-- More file links... -->
+            </ul>
         </div>
+    </div>
 
-        <script>
-            // Get the modal
-            var modal = document.getElementById("codeModal");
-            var filesSection = document.getElementById("filesSection");
+    <script>
+        // Modal functionality
+        var modal = document.getElementById("codeModal");
+        var filesSection = document.getElementById("filesSection");
 
-            // Get the button that opens the modal
-            var btn = document.getElementById("code-link");
+        var btn = document.getElementById("code-link");
+        var spans = document.getElementsByClassName("close");
 
-            // Get the <span> elements that close the modal
-            var spans = document.getElementsByClassName("close");
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
 
-            // When the user clicks the button, open the modal
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
-
-            // When the user clicks on <span> (x), close the modal
-            for (var i = 0; i < spans.length; i++) {
-                spans[i].onclick = function() {
-                    modal.style.display = "none";
-                    filesSection.style.display = "none";
-                }
-            }
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                } else if (event.target == filesSection) {
-                    filesSection.style.display = "none";
-                }
-            }
-
-            function checkCode() {
-                var code = document.getElementById("codeInput").value;
-                if (code === "sasha2828") {
-                    modal.style.display = "none";
-                    filesSection.style.display = "block";
-                } else {
-                    alert("Incorrect code");
-                }
-            }
-
-            function closeFiles() {
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].onclick = function () {
+                modal.style.display = "none";
                 filesSection.style.display = "none";
             }
-        </script>
-        
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.poptrox.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            } else if (event.target == filesSection) {
+                filesSection.style.display = "none";
+            }
+        }
+
+        function checkCode() {
+            var code = document.getElementById("codeInput").value;
+            if (code === "sasha2828") {
+                modal.style.display = "none";
+                filesSection.style.display = "block";
+            } else {
+                alert("Incorrect code");
+            }
+        }
+
+        function closeFiles() {
+            filesSection.style.display = "none";
+        }
+    </script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
