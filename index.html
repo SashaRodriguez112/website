@@ -1,81 +1,85 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>3d-gadgetz.nl</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <link rel="icon" href="https://www.3d-gadgetz.nl/images/ico.ico" type="image/ico">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+    <style>
+        :root {
+            --background-light: #ffffff;
+            --text-light: #000000;
+            --background-dark: #121212;
+            --text-dark: #ffffff;
+        }
 
-        <style>
-            .form-container {
-                display: flex;
-                justify-content: space-between;
-                gap: 20px;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-light);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: var(--background-dark);
+            color: var(--text-dark);
+        }
+
+        .toggle-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        .toggle-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-container">
+        <button class="toggle-button" id="darkModeToggle">Enable Dark Mode</button>
+    </div>
+
+    <h1>Welcome to My Website</h1>
+    <p>This is a sample website with a dark mode toggle feature.</p>
+
+    <script>
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+
+            // Update button text
+            const toggleButton = document.getElementById('darkModeToggle');
+            toggleButton.textContent = isDarkMode ? 'Disable Dark Mode' : 'Enable Dark Mode';
+        }
+
+        // Check localStorage for dark mode preference
+        window.onload = function () {
+            const darkMode = localStorage.getItem('darkMode') === 'true';
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
             }
-            .form-container .form-section {
-                width: 48%;
-            }
-            #main {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-            article.thumb {
-                flex: 1 1 calc(33.333% - 40px);
-                margin: 20px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            article.thumb img {
-                transform: scale(0.85); /* Reduce the size to 85% */
-                display: block; /* Prevent gaps caused by inline-block rendering */
-                border-radius: 15px; /* Add this line to round the corners */
-            }
-            .center-text {
-                text-align: center;
-                font-size: 2em;
-                margin-top: 20px;
-            }
-            .modal {
-                display: none; /* Hidden by default */
-                position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
-                left: 0;
-                top: 0;
-                width: 100%; /* Full width */
-                height: 100%; /* Full height */
-                overflow: auto; /* Enable scroll if needed */
-                background-color: rgba(0,0,0,0.9); /* Dark background */
-                padding-top: 60px;
-            }
-            .modal-content {
-                background-color: #333; /* Dark mode */
-                color: white; /* White text */
-                margin: 5% auto; /* 5% from the top and centered */
-                padding: 40px;
-                border: 1px solid #888;
-                width: 50%; /* Smaller size */
-            }
-            .close {
-                color: #aaa;
-                float: right;
-                font-size: 30px;
-                font-weight: bold;
-            }
-            .close:hover,
-            .close:focus {
-                color: white;
-                text-decoration: none;
-                cursor: pointer;
-            }
-            .dark-mode-input {
-                background-color: #444;
-                color: white;
-                border: 1px solid #888;
-                padding: 5px;
+
+            const toggleButton = document.getElementById('darkModeToggle');
+            toggleButton.textContent = darkMode ? 'Disable Dark Mode' : 'Enable Dark Mode';
+            toggleButton.addEventListener('click', toggleDarkMode);
+        };
+    </script>
             }
         </style>
     </head>
