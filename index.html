@@ -17,6 +17,20 @@
             .form-container .form-section {
                 width: 96%;
             }
+            .form-section h3 {
+                text-align: center; /* Center the text */
+                font-size: 1.5em; /* Adjust font size if needed */
+                margin-bottom: 20px; /* Add some spacing below the title */
+            }
+            .form-container .actions {
+                display: flex;
+                justify-content: center; /* Center the buttons */
+                gap: 10px; /* Add spacing between the buttons */
+            }
+            .form-container .actions input {
+                font-size: 1.1em; /* Make the buttons slightly larger */
+                padding: 10px 20px; /* Adjust padding for a better look */
+            }
             #main {
                 display: flex;
                 flex-wrap: wrap;
@@ -100,7 +114,7 @@
                     <h2><b>Pistool</b></h2>
                     <p>Wil je dit kopen? Stuur een mailtje naar mij in de about sectie. €2,-</p>
                 </article>
-                <article class="thumb">
+                                <article class="thumb">
                     <a href="images/fulls/spinner.png" class="image"><img src="images/thumb/spinner.png" alt="" /></a>
                     <h2><b>Spinner</b></h2>
                     <p>Wil je dit kopen? Stuur een mailtje naar mij in de about sectie. €1,50</p>
@@ -226,10 +240,9 @@
 
         <!-- The Modal -->
         <div id="codeModal" class="modal">
-            <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p  style="font-size: 20px;">Enter code to access files:</p>
+                <p style="font-size: 20px;">Enter code to access files:</p>
                 <input type="password" id="codeInput" placeholder="Enter code" class="dark-mode-input">
                 <button onclick="checkCode()" class="dark-mode-input">Submit</button>
             </div>
@@ -240,8 +253,9 @@
             <div class="modal-content">
                 <span class="close" onclick="closeFiles()">&times;</span>
                 <h2>Select a file:</h2>
-                <!-- List your files here -->
                 <ul>
+                    <!-- Files list -->
+                                    <ul>
                     <h6 style="font-size: 15px;">#1) Gun files:</h6>
                     <li><a href="files/gun/gun.stl">Gun</a></li>
                     <h6 style="font-size: 15px;">#2) Spinner files:</h6>
@@ -288,7 +302,6 @@
         </div>
 
         <script>
-            // Get the modal
             var modal = document.getElementById("codeModal");
             var filesSection = document.getElementById("filesSection");
 
