@@ -6,4 +6,4 @@
 - ⚡ Fun fact: i like to code
 - i would like advise on my website and maybe some help
   
-  <website><b>3d-gadgetz.nl</b></website>
+  <a href="https://3d-gadgetz.nl/#">This is my website 3d-gadgetz.nl</a>
