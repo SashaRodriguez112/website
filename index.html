@@ -30,10 +30,13 @@
             font-size: 1.5em; /* Adjust font size if needed */
             margin-bottom: 20px; /* Add some spacing below the title */
         }
-        .form-container .actions {
+        .form-buttons {
             display: flex;
-            justify-content: space-between; /* Space the buttons equally */
-            gap: 0px; /* Add spacing between the buttons */
+            justify-content: center;
+            gap: 10px; /* Adjust the gap between buttons as needed */
+        }
+        .form-buttons button {
+            width: 100px; /* Ensure both buttons have the same width */
         }
         .form-container .actions input {
             font-size: 1.1em; /* Make the buttons slightly larger */
@@ -197,7 +200,7 @@
                 <p>Dit is een tandpasta knijper, zodat je zeker weet dat je geen tandpaste verspilt. Wil je dit kopen? Stuur een mailtje naar mij in de about sectie. €2,-</p>
             </article>
         </div>
-
+        
         <footer id="footer" class="panel">
             <div class="inner split">
                 <div>
@@ -220,13 +223,13 @@
                     <p style="font-size: 12px">De prijs is afhankelijk van hoe moeilijk het is om te printen, hoeveel filament het kost en hoe moeilijk het is om in elkaar te zetten. Als je andere iedeeën hebt over de prijs, kan je mij mailen, en misschien kan ik het veranderen.</p>
                     <p class="copyright">&copy; Sasha Rodriguez met <a href="http://www.benjamintjoa.nl">Benjamin Tjoa</a>'s assistentie.</p>
                 </div>
-                                <div>
+                <div>
                     <section>
                         <h2>Is er een probleem of wil je een 3D-item? Stuur dan hieronder een email.</h2>
                         <div class="form-container">
                             <div class="form-section">
                                 <h3>Sasha Rodriguez</h3>
-                                   <form action="https://formspree.io/f/xovvpzqo" method="POST">
+                                <form action="https://formspree.io/f/xovvpzqo" method="POST">
                                     <div class="fields">
                                         <div class="field half">
                                             <input type="text" name="name" id="name" placeholder="Naam" />
@@ -238,10 +241,10 @@
                                             <textarea name="message" id="message" rows="4" placeholder="Bericht"></textarea>
                                         </div>
                                     </div>
-                                    <ul class="actions">
-                                        <button type="submit"><div class="field half">Send</button>
-                                        <button tybe="reset"><div class="field half">Reset</button>
-                                    </ul>
+                                    <div class="form-buttons">
+                                        <button type="submit">Send</button>
+                                        <button type="reset">Reset</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -250,7 +253,6 @@
             </div>
         </footer>
     </div>
-
     <!-- The Modal -->
     <div id="codeModal" class="modal">
         <div class="modal-content">
@@ -327,6 +329,8 @@
             modal.style.display = "block";
         }
 
+        // When the user clicks on <span> (x),[_{{{CITATION{{{_1{](https://github.com/JorisLousberg/room10Challenge6/tree/54830f356e2ea4ebe9ed20bd75fcb595ac34ff5a/contact_eng.php)[_{{{CITATION{{{_2{](https://github.com/omerkaptan/sinemabiletiniz/tree/539e8a1c3cac342ac88861282a70fc1abbc66316/sinemaoto%2Findex%20-%20Kopyala.php)
+        ...
         // When the user clicks on <span> (x), close the modal
         for (var i = 0; i < spans.length; i++) {
             spans[i].onclick = function() {
