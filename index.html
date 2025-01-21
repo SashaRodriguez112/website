@@ -7,15 +7,13 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="icon" href="https://www.3d-gadgetz.nl/images/ico.ico" type="image/ico">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TG2VW1C805"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TG2VW1C805');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TG2VW1C805"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TG2VW1C805');
+    </script>
     <style>
         .form-container {
             display: flex;
@@ -26,25 +24,25 @@
             width: 96%;
         }
         .form-section h3 {
-            text-align: center; /* Center the text */
-            font-size: 1.5em; /* Adjust font size if needed */
-            margin-bottom: 20px; /* Add some spacing below the title */
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
         .form-buttons {
             display: flex;
             justify-content: center;
-            gap: 10px; /* Adjust the gap between buttons as needed */
+            gap: 10px;
         }
         .form-buttons button {
-            width: 100px; /* Ensure both buttons have the same width */
+            width: 100px;
         }
         .form-container .actions input {
-            font-size: 1.1em; /* Make the buttons slightly larger */
-            padding: 8px; /* Adjust padding for a better look */
-            width: 95%; /* Make the buttons take 95% of the width */
-            text-align: center; /* Center the text horizontally */
-            display: block; /* Ensure the button takes the full width */
-            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            font-size: 1.1em;
+            padding: 8px;
+            width: 95%;
+            text-align: center;
+            display: block;
+            box-sizing: border-box;
         }
         #main {
             display: flex;
@@ -59,9 +57,9 @@
             align-items: center;
         }
         article.thumb img {
-            transform: scale(0.85); /* Reduce the size to 85% */
-            display: block; /* Prevent gaps caused by inline-block rendering */
-            border-radius: 100px; /* Add this line to round the corners */
+            transform: scale(0.85);
+            display: block;
+            border-radius: 100px;
         }
         .center-text {
             text-align: center;
@@ -69,24 +67,24 @@
             margin-top: 20px;
         }
         .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
+            display: none;
+            position: fixed;
+            z-index: 1;
             left: 0;
             top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgba(0,0,0,0.9); /* Dark background */
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
             padding-top: 60px;
         }
         .modal-content {
-            background-color: #333; /* Dark mode */
-            color: white; /* White text */
-            margin: 5% auto; /* 5% from the top and centered */
+            background-color: #333;
+            color: white;
+            margin: 5% auto;
             padding: 40px;
             border: 1px solid #888;
-            width: 50%; /* Smaller size */
+            width: 50%;
         }
         .close {
             color: #aaa;
@@ -94,8 +92,7 @@
             font-size: 30px;
             font-weight: bold;
         }
-        .close:hover,
-        .close:focus {
+        .close:hover, .close:focus {
             color: white;
             text-decoration: none;
             cursor: pointer;
@@ -106,13 +103,22 @@
             border: 1px solid #888;
             padding: 5px;
         }
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            article.thumb {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+        @media screen and (max-width: 480px) {
+            article.thumb {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body class="is-preload">
     <div class="center-text"><b>Welkom bij 3d-gadgetz.nl!</b></div>
-
     <div id="wrapper">
-
         <header id="header">
             <h1><a href="index.html"><strong>3D-Gadgetz.nl</strong> by Sasha Rodriguez</a></h1>
             <nav>
@@ -122,7 +128,6 @@
                 </ul>
             </nav>
         </header>
-
         <div id="main">
             <article class="thumb">
                 <a href="images/fulls/gun.png" class="image"><img src="images/thumb/gun.png" alt="" /></a>
