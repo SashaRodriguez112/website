@@ -371,26 +371,15 @@
                 filesSection.style.display = "none";
             }
         }
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access Page</title>
-    <script>
-        function checkAccessCode() {
-            let accessCode = prompt("Enter the access code:");
-            if (accessCode === "ifykyk") {
-                window.location.href = "game.html";
+
+        function checkCode() {
+            var code = document.getElementById("codeInput").value;
+            if (code === "ifykyk") {
+                modal.style.display = "none";
+                filesSection.style.display = "block";
             } else {
-                document.getElementById("message").innerText = "Access Denied. Incorrect code.";
+                alert("Incorrect code");
             }
-        }
-    </script>
-</head>
-<body onload="checkAccessCode()">
-    <p id="message"></p>
-</body>
-  }
         }
 
         // New Event Listener for Enter Key
