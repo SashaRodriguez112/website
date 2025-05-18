@@ -14,33 +14,39 @@
       gtag('js', new Date());
       gtag('config', 'G-TG2VW1C805');
     </script>
-    <!-- Inline Styles -->
     <style>
-        /* Global */
         body {
             background-color: black;
-            color: white;
-            margin: 0;
-            font-family: Arial, sans-serif;
         }
-        a { color: #ccc; text-decoration: none; }
-        a:hover { color: white; }
-
-        /* Header */
-        #header {
-            padding: 20px;
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .form-container .form-section {
+            width: 96%;
+        }
+        .form-section h3 {
             text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
-        #header h1 a { color: white; }
-
-        /* Center Text */
-        .center-text {
+        .form-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .form-buttons button {
+            width: 100px;
+        }
+        .form-container .actions input {
+            font-size: 1.1em;
+            padding: 8px;
+            width: 95%;
             text-align: center;
-            font-size: 2em;
-            margin: 20px 0;
+            display: block;
+            box-sizing: border-box;
         }
-
-        /* Gallery */
         #main {
             display: flex;
             flex-wrap: wrap;
@@ -54,80 +60,65 @@
             align-items: center;
         }
         article.thumb img {
-            display: block;
             transform: scale(0.85);
-            border-radius: 15px;
-            transition: transform 0.2s;
+            display: block;
+            border-radius: 100px;
         }
-        article.thumb img:hover {
-            transform: scale(0. nine);
-        }
-        article.thumb h2, article.thumb p {
+        .center-text {
             text-align: center;
-            margin: 10px 0 0;
-        }
-
-        /* Footer & Form */
-        .form-container { display: flex; justify-content: space-between; gap: 20px; }
-        .form-section { width: 96%; }
-        .form-section h3 { text-align: center; font-size: 1.5em; margin-bottom: 20px; }
-        .form-buttons { display: flex; justify-content: center; gap: 10px; }
-        .form-buttons button { width: 100px; }
-        .dark-mode-input {
-            background-color: #333;
+            font-size: 2em;
+            margin-top: 20px;
             color: white;
-            border: 1px solid #888;
-            padding: 5px;
-            border-radius: 4px;
         }
-
-        /* Modals */
         .modal {
             display: none;
             position: fixed;
-            z-index: 1000;
+            z-index: 1;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0,0,0,0);
             padding-top: 60px;
         }
         .modal-content {
-            background-color: #fff;
-            color: #000;
+            background-color: #333;
+            color: white;
             margin: 5% auto;
-            padding: 20px;
+            padding: 40px;
             border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 8px;
-        }
-        .modal-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
+            width: 50%;
         }
         .close {
             color: #aaa;
             float: right;
             font-size: 30px;
             font-weight: bold;
+        }
+        .close:hover, .close:focus {
+            color: white;
+            text-decoration: none;
             cursor: pointer;
         }
-        .close:hover { color: black; }
-
-        /* Responsive */
+        .dark-mode-input {
+            background-color: #333;
+            color: white;
+            border: 1px solid #888;
+            padding: 5px;
+        }
         @media screen and (max-width: 768px) {
-            article.thumb { flex: 1 1 calc(50% - 20px); }
+            article.thumb {
+                flex: 1 1 calc(50% - 20px);
+            }
         }
         @media screen and (max-width: 480px) {
-            article.thumb { flex: 1 1 100%; }
+            article.thumb {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
-
 <body class="is-preload">
     <div class="center-text"><b>Welkom bij 3d-gadgetz.nl!</b></div>
     <div id="wrapper">
@@ -135,19 +126,18 @@
             <h1><a href="index.html"><strong>3D-Gadgetz.nl</strong> by Sasha Rodriguez</a></h1>
             <nav>
                 <ul>
-                    <li><a href="#footer">About & Mail</a></li>
-                    <li><a href="#" id="code-link">Code and files</a></li>
+                    <li><a href="#footer" class="icon solid fa-info-circle">About & Mail</a></li>
+                    <li><a href="#" id="code-link" class="icon solid fa-code">Code and files</a></li>
                 </ul>
             </nav>
         </header>
-
         <div id="main">
             <article class="thumb">
-                <a href="#" data-full="images/fulls/gun.png"><img src="images/thumb/gun.png" alt="Pistool" /></a>
-                <h2>Pistool</h2>
+                <a href="images/fulls/gun.png" class="image"><img src="images/thumb/gun.png" alt="" /></a>
+                <h2><b>Pistool</b></h2>
                 <p>Wil je dit kopen? Stuur een mailtje naar mij in de about sectie. €2,-</p>
             </article>
-          <article class="thumb">
+            <article class="thumb">
                 <a href="images/fulls/spinner.png" class="image"><img src="images/thumb/spinner.png" alt="" /></a>
                 <h2><b>Spinner</b></h2>
                 <p>Wil je dit kopen? Stuur een mailtje naar mij in de about sectie. €1,50</p>
@@ -212,27 +202,51 @@
                 <h2><b>Tandpasta knijper</b></h2>
                 <p>Dit is een tandpasta knijper, zodat je zeker weet dat je geen tandpaste verspilt. Wil je dit kopen? Stuur een mailtje naar mij in de about sectie. €1,25</p>
             </article>
-            </div>
-
+        </div>
+        
         <footer id="footer" class="panel">
             <div class="inner split">
                 <div>
-                    <h2>Welkom!</h2>
-                    <p>Hoi, deze website is gemaakt door Sasha Rodriguez.</p>
+                    <section>
+                        <h2>Welkom!</h2>
+                        <p>Hoi, deze website is gemaakt door Sasha Rodriguez en Benjamin Tjoa. Deze site is net gelaunched dus kan het zijn dat er problemen of errors zijn. Als dit zo is, stuur dan een mail naar 2324116@hageveld.nl (Sasha Rodriguez) of naar 2223215@hageveld.nl (Benjamin Tjoa).</p>
+                    </section>
+                    <h2>Custom design</h2>
+                    <p>Deze website heeft al een paar voorbeelden, maar er komen er steeds nieuw erbij. Heb je een tip of een <b>custom disign</b> die je wilt toevoegen, is dat natuurlijk ook mogelijk. Dat kan je hiernaast naar ons mailen.</p>
+                    <h2>Kleuren</h2>
+                    <section>Ik heb nog niet veel kleuren, maar als je een idee hebt voor de volgende kleuren die ik ga kopen, kan je gewoon een mail sturen hiernaast naar Sasha.</section>
+                    <br>
+                    <section><b>Dit zijn kleuren die ik heb:</b></section>
+                    <ul>
+                        <li>Blauw</li>
+                        <li>Transparant</li>
+                        <li>Zwart</li>
+                    </ul>
+                    <h6 style="font-size: 15px;" style="margin: 0;">Prijs</h6>
+                    <p style="font-size: 12px">De prijs is afhankelijk van hoe moeilijk het is om te printen, hoeveel filament het kost en hoe moeilijk het is om in elkaar te zetten. Als je andere iedeeën hebt over de prijs, kan je mij mailen, en kunnen we het aanpassen.<br><b>Bovendien krijgen vrienden een 50% discount!!<b></b></p>
+                    <p class="copyright">&copy; Sasha Rodriguez 2024-2025</p>
                 </div>
                 <div>
                     <section>
-                        <h2>Contact</h2>
+                        <h2>Is er een probleem of wil je een 3D-item? Stuur dan hieronder een email.</h2>
                         <div class="form-container">
                             <div class="form-section">
-                                <h3>Stuur een bericht</h3>
+                                <h3>Sasha Rodriguez</h3>
                                 <form action="https://formspree.io/f/xovvpzqo" method="POST">
-                                    <input type="text" name="name" placeholder="Naam" class="dark-mode-input" required />
-                                    <input type="email" name="email" placeholder="Email" class="dark-mode-input" required />
-                                    <textarea name="message" rows="4" placeholder="Bericht" class="dark-mode-input" required></textarea>
+                                    <div class="fields">
+                                        <div class="field half">
+                                            <input type="text" name="name" id="name" placeholder="Naam" />
+                                        </div>
+                                        <div class="field half">
+                                            <input type="text" name="email" id="email" placeholder="Email" />
+                                        </div>
+                                        <div class="field">
+                                            <textarea name="message" id="message" rows="4" placeholder="Bericht"></textarea>
+                                        </div>
+                                    </div>
                                     <div class="form-buttons">
-                                        <button type="submit" class="dark-mode-input">Send</button>
-                                        <button type="reset" class="dark-mode-input">Reset</button>
+                                        <button type="submit">Send</button>
+                                        <button type="reset">Reset</button>
                                     </div>
                                 </form>
                             </div>
@@ -240,34 +254,25 @@
                     </section>
                 </div>
             </div>
-            <p style="text-align:center; font-size:12px;">&copy; Sasha Rodriguez 2024-2025</p>
         </footer>
     </div>
-
-    <!-- Full-size Image Modal -->
-    <div id="imageModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <img src="" alt="" />
-      </div>
-    </div>
-
-    <!-- Code Modal -->
+    
+    <!-- The Modal -->
     <div id="codeModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Enter code to access files:</p>
-        <input type="password" id="codeInput" class="dark-mode-input" />
-        <button onclick="checkCode()" class="dark-mode-input">Submit</button>
-      </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p style="font-size: 20px;">Enter code to access files:</p>
+            <input type="password" id="codeInput" placeholder="Enter code" class="dark-mode-input">
+            <button onclick="checkCode()" class="dark-mode-input">Submit</button>
+        </div>
     </div>
 
-    <!-- Files Section Modal -->
+    <!-- The Files Section -->
     <div id="filesSection" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Select a file:</h2>
-             <ul>
+        <div class="modal-content">
+            <span class="close" onclick="closeFiles()">&times;</span>
+            <h2>Select a file:</h2>
+            <ul>
                 <li style="font-size: 15px;">#1) Gun files:</li>
                 <a><a href="files/gun/gun.stl">Gun</a></a>
                 <h2> </h2>
@@ -334,37 +339,59 @@
                 <a href="https://github.com/SashaRodriguez112/website/edit/main/index.html">Github</a><br>
                 <a href="https://www.thingiverse.com/">Thingiverse</a><br>
             </ul>
-      </div>
+        </div>
     </div>
 
     <script>
-      // Thumbnail click -> show full-size in modal
-      document.querySelectorAll('a[data-full]').forEach(el => {
-        el.addEventListener('click', e => {
-          e.preventDefault();
-          const src = el.getAttribute('data-full');
-          const modal = document.getElementById('imageModal');
-          modal.querySelector('img').src = src;
-          modal.style.display = 'block';
+        var modal = document.getElementById("codeModal");
+        var filesSection = document.getElementById("filesSection");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("code-link");
+
+        // Get the <span> elements that close the modal
+        var spans = document.getElementsByClassName("close");
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].onclick = function() {
+                modal.style.display = "none";
+                filesSection.style.display = "none";
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            } else if (event.target == filesSection) {
+                filesSection.style.display = "none";
+            }
+        }
+
+        function checkCode() {
+            var code = document.getElementById("codeInput").value;
+            if (code === "ifykyk") {
+                modal.style.display = "none";
+                filesSection.style.display = "block";
+            } else {
+                alert("Incorrect code");
+            }
+        }
+
+        // New Event Listener for Enter Key
+        document.getElementById("codeInput").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") { // Check if Enter is pressed
+                checkCode(); // Trigger checkCode function
+            }
         });
-      });
-      // Close modals
-      document.querySelectorAll('.modal .close').forEach(x => x.onclick = () => x.closest('.modal').style.display='none');
-      window.onclick = e => {
-        if(e.target.classList.contains('modal')) e.target.style.display='none';
-      };
-      // Code modal logic
-      document.getElementById('code-link').onclick = () => document.getElementById('codeModal').style.display='block';
-      function checkCode() {
-        if(document.getElementById('codeInput').value==='ifykyk') {
-          document.getElementById('codeModal').style.display='none';
-          document.getElementById('filesSection').style.display='block';
-        } else alert('Incorrect code');
-      }
-      document.getElementById('codeInput').addEventListener('keydown', e => e.key==='Enter' && checkCode());
     </script>
 
-    <!-- External JS -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.poptrox.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
